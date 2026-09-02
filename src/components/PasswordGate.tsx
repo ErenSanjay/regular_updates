@@ -39,7 +39,7 @@ export const PasswordGate: React.FC<PasswordGateProps> = ({ onUnlock }) => {
           <Heart className="w-12 h-12 text-rose-400 fill-rose-400" />
         </motion.div>
         <h1 className="text-3xl font-bold text-rose-800 mb-2">Hello Love</h1>
-        <p className="text-rose-600 mb-8">What's the magic word?</p>
+        <p className="text-rose-600 mb-8">What do I call you when you are being extra cute?</p>
         
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
