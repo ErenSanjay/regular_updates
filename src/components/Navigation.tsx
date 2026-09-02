@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Home, Mail, Smile } from 'lucide-react';
+import { Home, Mail } from 'lucide-react';
 import clsx from 'clsx';
 
 export type Tab = 'home' | 'letters' | 'silly';
@@ -14,7 +14,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentTab, onChange }) 
   const tabs = [
     { id: 'home' as Tab, label: 'Home', icon: Home },
     { id: 'letters' as Tab, label: 'Letters', icon: Mail },
-    { id: 'silly' as Tab, label: 'Silly Things', icon: Smile },
+    // { id: 'silly' as Tab, label: 'Silly Things', icon: Smile },
   ];
 
   return (
