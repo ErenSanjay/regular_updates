@@ -38,10 +38,21 @@ export const SillyThingCard: React.FC<SillyThingCardProps> = ({ item, index }) =
         
         {/* Back */}
         <div 
-          className="absolute inset-0 bg-gradient-to-br from-rose-400 to-pink-500 rounded-2xl shadow-lg p-6 flex items-center justify-center text-center text-white"
+          className="absolute inset-0 bg-gradient-to-br from-rose-400 to-pink-500 rounded-2xl shadow-lg p-6 flex items-center justify-center text-center text-white overflow-hidden"
           style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
         >
-          <p className="font-serif text-md md:text-lg italic leading-relaxed text-white drop-shadow-sm">{item.description}</p>
+          {item.media && (
+            <div className="absolute inset-0 opacity-40 z-0">
+              {item.mediaType === 'video' ? (
+                <video src={item.media} autoPlay loop muted playsInline className="w-full h-full object-cover" />
+              ) : (
+                <img src={item.media} alt={item.title} className="w-full h-full object-cover" />
+              )}
+            </div>
+          )}
+          <div className="z-10 relative">
+            <p className="font-serif text-md md:text-lg italic leading-relaxed text-white drop-shadow-md font-medium">{item.description}</p>
+          </div>
         </div>
       </motion.div>
     </div>

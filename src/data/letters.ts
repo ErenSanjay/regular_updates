@@ -1,17 +1,17 @@
 export const letters = [
   {
     id: 1,
-    title: "The first letter",
+    title: "My First PDF Letter",
     date: "September 1, 2026",
-    file: "/letters/letter-01.pdf",
+    file: "/letters/pdf.pdf",
     type: "pdf" as const
   },
   {
     id: 2,
-    title: "For you ❤️",
+    title: "Another Letter For You ❤️",
     date: "September 5, 2026",
-    file: "/letters/letter-02.jpg",
-    type: "image" as const
+    file: "/letters/pdf2.pdf",
+    type: "pdf" as const
   }
 ];
 
