@@ -19,6 +19,13 @@ export const letters = [
     date: "September 2, 2026",
     file: "/letters/pdf3.pdf",
     type: "pdf" as const
+  },
+  {
+    id: 4,
+    title: "A Special Poem",
+    date: "September 5, 2026",
+    file: "/letters/poem1.pdf",
+    type: "pdf" as const
   }
 ];
 
