@@ -26,7 +26,15 @@ export const letters = [
     date: "September 5, 2026",
     file: "/letters/poem1.pdf",
     type: "pdf" as const
+  },
+  {
+    id: 5,
+    title: "An Honest Letter after self reflection",
+    date: "September 6, 2026",
+    file: "/letters/pdf4.pdf",
+    type: "pdf" as const
   }
+
 ];
 
 export type Letter = typeof letters[0];
