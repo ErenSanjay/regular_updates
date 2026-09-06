@@ -21,7 +21,7 @@ export const RomanticIntro: React.FC<RomanticIntroProps> = ({ onComplete }) => {
     };
   }, [onComplete]);
 
-  const message = "words can't express the feelings you initiated in my soul";
+  const message = "words can't describe the feelings you initiated in my soul";
 
   return (
     <motion.div 
