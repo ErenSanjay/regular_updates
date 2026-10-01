@@ -54,8 +54,7 @@ export const letters = [
     date: "September 24, 2026",
     file: "/letters/number9.pdf",
     type: "pdf" as const
-  },
-  
+  }
 
 ];
 
