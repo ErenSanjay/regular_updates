@@ -57,7 +57,7 @@ export const letters = [
   },
   {
     id: 9,
-    title: "Ninth Letter",
+    title: "Acceptence",
     date: "October 12, 2026",
     file: "/letters/number10.pdf",
     type: "pdf" as const
