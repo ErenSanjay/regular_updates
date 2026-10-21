@@ -66,14 +66,21 @@ export const letters = [
     id: 10,
     title: "Reality",
     date: "October 17, 2026",
-    file: "/letters/number9.pdf",
+    file: "/letters/number11.pdf",
     type: "pdf" as const
   },
   {
     id: 11,
     title: "Continuing the same path",
     date: "October 18, 2026",
-    file: "/letters/number10.pdf",
+    file: "/letters/number11.pdf",
+    type: "pdf" as const
+  },
+  {
+    id: 12,
+    title: "Short Message",
+    date: "October 21, 2026",
+    file: "/letters/number12.pdf",
     type: "pdf" as const
   }
 
