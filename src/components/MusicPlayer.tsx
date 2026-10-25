@@ -1,10 +1,21 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Pause } from 'lucide-react';
 
 export const MusicPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    const handlePause = () => {
+      if (audioRef.current && isPlaying) {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      }
+    };
+    window.addEventListener('pause-bg-music', handlePause);
+    return () => window.removeEventListener('pause-bg-music', handlePause);
+  }, [isPlaying]);
 
   const togglePlay = () => {
     if (audioRef.current) {

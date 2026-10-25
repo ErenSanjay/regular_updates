@@ -8,12 +8,12 @@ import { Navigation } from './components/Navigation';
 import type { Tab } from './components/Navigation';
 import { LetterCard } from './components/LetterCard';
 import { LetterViewer } from './components/LetterViewer';
-import { SillyThingCard } from './components/SillyThingCard';
+import { VoiceNoteCard } from './components/VoiceNoteCard';
 import { MusicPlayer } from './components/MusicPlayer';
 import { letters } from './data/letters';
 import type { Letter } from './data/letters';
-import { sillyThings } from './data/sillyThings';
-import { Heart } from 'lucide-react';
+import { voiceNotes } from './data/voiceNotes';
+import { Heart, Mic } from 'lucide-react';
 
 function App() {
   const [isUnlocked, setIsUnlocked] = useState(false);
@@ -84,20 +84,31 @@ function App() {
             </motion.div>
           )}
 
-          {currentTab === 'silly' && (
+          {currentTab === 'voicenotes' && (
             <motion.div
-              key="silly"
+              key="voicenotes"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-3xl font-serif text-rose-800 font-bold mb-8 text-center">Silly Things I Remember</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {sillyThings.map((thing, index) => (
-                  <SillyThingCard 
-                    key={thing.id} 
-                    item={thing} 
+              <div className="text-center mb-10">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-rose-100/80 text-rose-500 mb-4 shadow-sm border border-rose-200">
+                  <Mic className="w-7 h-7" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-serif text-rose-800 font-bold mb-3">
+                  Voice Notes for You
+                </h2>
+                <p className="text-stone-600 font-serif italic max-w-md mx-auto text-sm md:text-base">
+                  Because sometimes letters aren't enough, and I just wanted you to hear my voice.
+                </p>
+              </div>
+
+              <div className="space-y-6 max-w-2xl mx-auto">
+                {voiceNotes.map((note, index) => (
+                  <VoiceNoteCard 
+                    key={note.id} 
+                    note={note} 
                     index={index} 
                   />
                 ))}
